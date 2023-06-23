@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  div(class="flex flex-wrap justify-center")
+    div(class="w-full max-w-xs mt-20")
+      form(class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" action="/register" method="post")
+        div(class="mb-4")
+          label(class="block text-gray-700 text-sm font-bold mb-2" for="firstname") First Name
+          input(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="firstname" name="firstname" type="text" placeholder="First Name" required)
+        div(class="mb-4")
+          label(class="block text-gray-700 text-sm font-bold mb-2" for="lastname") Last Name
+          input(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="lastname" name="lastname" type="text" placeholder="Last Name" required)
+        div(class="mb-4")
+          label(class="block text-gray-700 text-sm font-bold mb-2" for="email") Email
+          input(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" name="email" type="email" placeholder="Email" required)
+        div(class="mb-4")
+          label(class="block text-gray-700 text-sm font-bold mb-2" for="password") Password
+          input(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="password" name="password" type="password" placeholder="********" required)
+        div(class="mb-4")
+          label(class="block text-gray-700 text-sm font-bold mb-2" for="confirmPassword") Confirm Password
+          input(class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="confirmPassword" name="confirmPassword" type="password" placeholder="********" required)
+        div(class="flex items-center justify-between")
+          button(class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit") Register
+    
+  p(class="text-center text-sm mt-2") 
+    | Already have an account? 
+    a(class="text-blue-500 hover:text-blue-700" href="/login") Login
